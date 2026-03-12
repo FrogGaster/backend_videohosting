@@ -57,7 +57,7 @@ S3_CONNECT_TIMEOUT_SEC = int(os.getenv("S3_CONNECT_TIMEOUT_SEC", "3"))
 S3_READ_TIMEOUT_SEC = int(os.getenv("S3_READ_TIMEOUT_SEC", "20"))
 S3_MAX_RETRIES = int(os.getenv("S3_MAX_RETRIES", "5"))
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
-MAX_VIDEO_BYTES = int(os.getenv("MAX_VIDEO_BYTES", str(1024 * 1024 * 1024)))
+MAX_VIDEO_BYTES = int(os.getenv("MAX_VIDEO_BYTES", str(3 * 1024 * 1024 * 1024)))
 
 is_sqlite = DATABASE_URL.startswith("sqlite")
 engine_kwargs: dict = {"future": True}
